@@ -20,4 +20,3 @@ Book.propTypes = {
   title: string.isRequired,
   author: string.isRequired,
 };
-
