@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Books from './Pages/Books';
 import Categories from './Pages/Categories';
 import NavBar from './components/NavBar';
+import './App.css';
 
 export default function App() {
   return (
