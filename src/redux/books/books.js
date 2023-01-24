@@ -1,6 +1,6 @@
 // Action Types
-const ADD_BOOK = 'ADD_BOOK';
-const REMOVE_BOOK = 'REMOVE_BOOK';
+const ADD_BOOK = 'bookstore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
 // Initial State
 const initialState = [];
@@ -22,7 +22,7 @@ export default (state = initialState, action) => {
     case ADD_BOOK:
       return [...state, action.book];
     case REMOVE_BOOK:
-      return state.filter((b) => b !== action.book);
+      return state.filter((b) => b.id !== action.book.id);
     default:
       return state;
   }
