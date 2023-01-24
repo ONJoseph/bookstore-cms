@@ -1,36 +1,32 @@
-nav {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul,
+form {
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style-type: none;
+}
+
+.nav-bar {
   display: flex;
   align-items: center;
   margin: 1.813rem 6.25rem;
   gap: 2.938rem;
 }
 
-nav ul {
+.nav ul {
   display: flex;
   list-style: none;
   gap: 2.563rem;
-}
-
-.brand {
-  font-family: Montserrat, serif;
-  font-weight: bold;
-  color: var(--azure);
-  font-size: 1.875rem;
-}
-
-.nav-link {
-  font-family: Montserrat, serif;
-  font-weight: normal;
-  font-size: 0.813rem;
-  color: var(--black-sharp);
-  text-decoration: none;
-  letter-spacing: 1.9px;
-}
-
-.line {
-  border: 1px solid var(--white-dull);
-}
-
-.books-line {
-  margin: 0 6.25rem;
 }
