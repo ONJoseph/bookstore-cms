@@ -17,7 +17,7 @@ export default function Books() {
   ];
   return (
     <main>
-      <ul className="booksList">
+      <ul className="BooksList">
         {
           testData.map((book) => (
             <Book

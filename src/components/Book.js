@@ -1,5 +1,5 @@
 import React from 'react';
-import { string } from 'prop-types';
+import PropTypes from 'prop-types';
 
 export default function Book(props) {
   const { title, author } = props;
@@ -17,6 +17,6 @@ export default function Book(props) {
 }
 
 Book.propTypes = {
-  title: string.isRequired,
-  author: string.isRequired,
+  title: PropTypes.isRequired,
+  author: PropTypes.isRequired,
 };
