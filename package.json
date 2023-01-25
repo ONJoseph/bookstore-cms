@@ -45,6 +45,7 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.20.7",
-    "@babel/core": "^7.20.12"
+    "@babel/core": "^7.20.12",
+    "stylelint-config-standard": "^29.0.0"
   }
 }
