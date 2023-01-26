@@ -1,4 +1,4 @@
-const options = [
+const choices = [
   {
     text: 'Space',
     value: 'space',
@@ -91,4 +91,4 @@ const options = [
   },
 ];
 
-export default options;
+export default choices;
