@@ -63,51 +63,42 @@ button {
   background-color: #333;
   color: #fff;
   padding: 1rem;
-  }
-  
-  .logo {
+}
+
+.logo {
   font-size: 2rem;
-  }
-  
-  .link {
+}
+
+.link {
   color: #fff;
   text-decoration: none;
   padding: 0.5rem 1rem;
   transition: all 0.3s ease;
-  }
-  
-  .link:hover {
+}
+
+.link:hover {
   background-color: #fff;
   color: #333;
-  }
-  
-  .active-link {
+}
+
+.active-link {
   background-color: #fff;
   color: #333;
-  }
-  
-  ul {
+}
+
+ul {
   list-style: none;
   display: flex;
-  }
-  
-  li {
-  margin-left: 1rem;
-  }
+}
 
 .booklist__container {
-list-style: none;
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 li {
-width: 30%;
-margin-bottom: 1rem;
+  width: 30%;
+  margin-bottom: 1rem;
 }
-
-
-
-
-
