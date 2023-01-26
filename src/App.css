@@ -1,32 +1,104 @@
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ol,
-ul,
-form {
+body {
   margin: 0;
   padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-ol,
-ul {
-  list-style-type: none;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.nav-bar {
+h2 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+input {
+  padding: 10px;
+  margin: 0 10px;
+  font-size: 16px;
+  width: 300px;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.book {
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.navbar {
   display: flex;
   align-items: center;
-  margin: 1.813rem 6.25rem;
-  gap: 2.938rem;
+  justify-content: space-between;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
 }
 
-.nav ul {
-  display: flex;
+.logo {
+  font-size: 2rem;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.link:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+.active-link {
+  background-color: #fff;
+  color: #333;
+}
+
+ul {
   list-style: none;
-  gap: 2.563rem;
+  display: flex;
+}
+
+.booklist__container {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+li {
+  width: 30%;
+  margin-bottom: 1rem;
 }
