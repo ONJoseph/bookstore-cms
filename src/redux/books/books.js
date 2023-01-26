@@ -1,34 +1,32 @@
-// Action Types
-const ADD_BOOK = 'bookstore/books/ADD_BOOK';
-const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
+import { v4 as uuidv4 } from 'uuid';
 
-// Initial State
-const initialState = [
-  { id: 1, title: 'Book 1', author: 'Author 1' },
-  { id: 2, title: 'Book 2', author: 'Author 2' },
-  { id: 3, title: 'Book 3', author: 'Author 3' },
-];
+const initialState = [];
 
-// Action Creators
-const addBook = (book) => ({
+const ADD_BOOK = 'bookStore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
+
+export const addBookAction = (title, author) => ({
   type: ADD_BOOK,
-  payload: book,
+  payload: {
+    title,
+    author,
+    item_id: uuidv4(),
+  },
 });
 
-const removeBook = (book) => ({
+export const removeBookAction = (id) => ({
   type: REMOVE_BOOK,
-  payload: book,
+  payload: {
+    item_id: id,
+  },
 });
 
-export { addBook, removeBook };
-
-// Reducer
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_BOOK:
       return [...state, action.payload];
     case REMOVE_BOOK:
-      return state.filter((b) => b.id !== action.payload.id);
+      return state.filter((book) => book.item_id !== action.payload.item_id);
     default:
       return state;
   }

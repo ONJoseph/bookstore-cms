@@ -1,21 +1,30 @@
+import { v4 as uuidv4 } from 'uuid';
+
 // Action Types
 const CHECK_STATUS = 'bookstore/categories/CHECK_STATUS';
 
+// Initial State
+const initialState = {
+  status: '',
+};
+
 // Action Creators
-const checkStatus = (payload) => ({
+const checkStatus = (status) => ({
   type: CHECK_STATUS,
-  payload,
+  payload: status,
+  item_id: uuidv4(),
 });
 
+export { checkStatus };
+
 // Reducer
-const reducer = (state = [], action = {}) => {
+const categories = (state = initialState, action) => {
   switch (action.type) {
     case CHECK_STATUS:
-      return 'Under construction';
-    default: return state;
+      return { ...state, status: action.payload };
+    default:
+      return state;
   }
 };
 
-export default reducer;
-
-export { checkStatus };
+export default categories;
