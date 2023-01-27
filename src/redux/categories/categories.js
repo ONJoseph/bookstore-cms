@@ -1,30 +1,35 @@
-import { v4 as uuidv4 } from 'uuid';
+const STATUS_CHECKED = 'STATUS_CHECKED';
 
-// Action Types
-const CHECK_STATUS = 'bookstore/categories/CHECK_STATUS';
+const initialState = [
+  {
+    id: '1',
+    author: 'Joseph',
+    title: 'How to Achieve Mastery in Software Development',
+    category: 'Software',
+  },
+  {
+    id: '2',
+    author: 'John Smith',
+    title: 'The Great Gatsby',
+    category: 'Fiction',
+  },
+  {
+    id: '3',
+    author: 'Akasha',
+    title: 'The Unbearable Lightness of Being',
+    category: 'Lifestyle',
+  },
+];
 
-// Initial State
-const initialState = {
-  status: '',
-};
-
-// Action Creators
-const checkStatus = (status) => ({
-  type: CHECK_STATUS,
-  payload: status,
-  item_id: uuidv4(),
-});
-
-export { checkStatus };
-
-// Reducer
-const categories = (state = initialState, action) => {
+const categoriesReducer = (state = initialState, action) => {
   switch (action.type) {
-    case CHECK_STATUS:
-      return { ...state, status: action.payload };
+    case STATUS_CHECKED:
+      return 'Under Construction';
     default:
       return state;
   }
 };
 
-export default categories;
+export const checkStatus = () => ({ type: STATUS_CHECKED });
+
+export default categoriesReducer;
