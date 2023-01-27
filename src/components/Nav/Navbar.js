@@ -1,41 +1,32 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useState } from 'react';
+import { MdOutlineClose } from 'react-icons/md';
+import { Link, NavLink } from 'react-router-dom';
+import { GoThreeBars } from 'react-icons/go';
+import data from '../../generals/data';
+import user from '../../assets/user.png';
 
-function Navbar() {
-  const links = [
-    {
-      id: 1,
-      path: '/',
-      text: 'BOOKS',
-    },
-    {
-      id: 2,
-      path: '/category',
-      text: 'CATEGORIES',
-    },
-  ];
-
+const Navbar = () => {
+  const [isNavShowing, setIsNavShowing] = useState(false);
   return (
-    <nav className="navbar">
-      <h1 className="logo">
-        Bookstore CMS
-      </h1>
-      <ul>
-        {links.map((link) => (
-          <li key={link.id}>
-            <NavLink
-              to={link.path}
-              className="link"
-              activeClassName="active-link"
-              exact
-            >
-              {link.text}
-            </NavLink>
+    <nav className="nav-container">
+      <Link to="/" className="logo" onClick={() => setIsNavShowing(false)}>
+        <span>Book Store CMS</span>
+      </Link>
+      <ul className={`nav-links ${isNavShowing ? 'show-nav' : 'hide-nav'}`}>
+        {data.map((item) => (
+          <li key={item.id}>
+            <NavLink to={item.link} className={({ isActive }) => (isActive ? 'active-nav' : '')} onClick={() => setIsNavShowing((prev) => !prev)}>{ item.title }</NavLink>
           </li>
         ))}
       </ul>
+      <div className="user-avatar">
+        <img src={user} alt="user-avatar" />
+      </div>
+      <button type="button" className="nav-toggle-btn" onClick={() => setIsNavShowing((prev) => !prev)}>
+        {isNavShowing ? <MdOutlineClose /> : <GoThreeBars />}
+      </button>
     </nav>
   );
-}
+};
 
 export default Navbar;
