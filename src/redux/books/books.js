@@ -1,4 +1,4 @@
-import apis from '../../booksApis/apis';
+import apis from '../../booksAPIs/apis';
 
 const ADD_BOOK = 'ADD_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
