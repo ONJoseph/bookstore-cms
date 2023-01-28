@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Modal from '../modal/Modal';
 
-const Card = ({ data }) => {
+function Card({ data }) {
   const [show, setShow] = useState(false);
   const [bookItem, setBookItem] = useState();
 
@@ -67,7 +67,7 @@ const Card = ({ data }) => {
      }
     </>
   );
-};
+}
 
 Card.propTypes = {
   data: PropTypes.oneOfType([

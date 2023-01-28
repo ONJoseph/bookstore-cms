@@ -1,4 +1,5 @@
-import { configureStore, createAsyncThunk, thunkMiddleware } from '@reduxjs/toolkit';
+import { configureStore, createAsyncThunk } from '@reduxjs/toolkit';
+import thunk from 'redux-thunk';
 import booksReducer from './books/books';
 import categoriesReducer from './categories/categories';
 
@@ -19,7 +20,7 @@ const store = configureStore({
     books: booksReducer,
     categories: categoriesReducer,
   },
-  middleware: [thunkMiddleware],
+  middleware: [thunk],
 });
 
 export default store;

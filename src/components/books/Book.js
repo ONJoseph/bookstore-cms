@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../../redux/books/books';
 import progress from '../../assets/progress.png';
-import '../../styles/books.css';
 
-const Book = (props) => {
+function Book(props) {
   const dispatch = useDispatch();
   const {
     id, title, author, category,
@@ -52,7 +51,7 @@ const Book = (props) => {
       </div>
     </li>
   );
-};
+}
 
 Book.propTypes = {
   id: PropTypes.string.isRequired,

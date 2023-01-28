@@ -4,7 +4,7 @@ import AddBooks from '../../components/addBooks/AddBooks';
 import Book from '../../components/books/Book';
 import { fetchBooks } from '../../redux/books/books';
 
-const Home = () => {
+function Home() {
   const books = useSelector((state) => state.books);
   const dispatch = useDispatch();
 
@@ -15,16 +15,14 @@ const Home = () => {
   let renderBooks = '';
   renderBooks = books.length > 0 ? (
     books.map((elem) => (
-      <>
-        <Book
-          id={elem.id}
-          key={elem.id}
-          book={elem}
-          title={elem.title}
-          author={elem.author}
-          category={elem.category}
-        />
-      </>
+      <Book
+        id={elem.id}
+        key={elem.id}
+        book={elem}
+        title={elem.title}
+        author={elem.author}
+        category={elem.category}
+      />
     ))
   ) : (
     <div className="no-book-error">
@@ -41,6 +39,6 @@ const Home = () => {
       <AddBooks />
     </div>
   );
-};
+}
 
 export default Home;

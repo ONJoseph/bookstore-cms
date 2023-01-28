@@ -2,7 +2,7 @@ import React from 'react';
 import { FaSearch } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 
-const SearchBar = (props) => {
+function SearchBar(props) {
   const { value, onChange, onKeyPress } = props;
   console.log(value);
   return (
@@ -28,7 +28,7 @@ const SearchBar = (props) => {
       </div>
     </div>
   );
-};
+}
 
 SearchBar.propTypes = {
   value: PropTypes.oneOfType([

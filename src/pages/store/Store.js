@@ -3,7 +3,7 @@ import axios from 'axios';
 import Card from '../../components/card/Card';
 import SearchBar from '../../components/searchBar/SearchBar';
 
-const Store = () => {
+function Store() {
   const [data, setData] = useState([]);
   const [search, setSearch] = useState('');
   const searchTerm = 'react';
@@ -46,6 +46,6 @@ const Store = () => {
       </section>
     </>
   );
-};
+}
 
 export default Store;
