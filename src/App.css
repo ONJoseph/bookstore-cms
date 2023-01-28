@@ -702,7 +702,6 @@ form button[type="submit"]:hover {
   }
 }
 
-
 /* Home Component */
 .books-container {
   display: flex;
@@ -736,7 +735,6 @@ form button[type="submit"]:hover {
   font-weight: 600;
   color: #6c757d;
 }
-
 
 /* Store.css */
 
