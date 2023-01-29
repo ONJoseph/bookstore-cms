@@ -1,4 +1,5 @@
 import apis from '../../booksAPIs/apis';
+import '../../styles/App.css';
 
 const ADD_BOOK = 'ADD_BOOK';
 const REMOVE_BOOK = 'REMOVE_BOOK';
