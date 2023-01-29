@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Outlet } from 'react-router-dom';
 import Card from '../../components/card/Card';
 import SearchBar from '../../components/searchBar/SearchBar';
 
@@ -44,6 +45,7 @@ function Store() {
           <Card data={data} />
         </div>
       </section>
+      <Outlet />
     </>
   );
 }

@@ -29,18 +29,21 @@ const apis = {
   },
 
   fetchBooks: async () => {
-    const response = await fetch(bookURL);
-    const data = await response.json();
-
-    const books = Object.entries(data).map(([id, book]) => {
-      const { title, author, category } = book[0];
-      return {
-        id, title, author, category,
-      };
-    })
-      .sort((a, b) => a.title.localeCompare(b.title));
-
-    return books;
+    try {
+      const response = await fetch(bookURL);
+      const data = await response.json();
+      const books = Object.entries(data).map(([id, book]) => {
+        const { title, author, category } = book;
+        return {
+          id, title, author, category,
+        };
+      })
+        .sort((a, b) => a.title.localeCompare(b.title));
+      return books;
+    } catch (err) {
+      console.log('Error occured while fetching books', err);
+      return [];
+    }
   },
 };
 
