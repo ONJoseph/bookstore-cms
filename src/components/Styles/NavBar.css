@@ -1,0 +1,87 @@
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 4%;
+  background-color: #fff;
+  border-bottom: 1px solid #e8e8e8;
+  gap: 40px;
+}
+
+.header-nav-items {
+  display: flex;
+  gap: 20px;
+  text-transform: uppercase;
+  align-items: center;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.nav-brand-logo {
+  display: flex;
+  gap: 0.625rem;
+  align-items: center;
+  margin-left: 4rem;
+}
+
+.nav-brand-logo span {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0290ff;
+}
+
+.nav-brand-logo a {
+  color: #0290ff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-transform: none;
+}
+
+.header-nav-item {
+  cursor: pointer;
+}
+
+.header-nav-items a {
+  padding: 10px 20px;
+  color: #0290ff;
+}
+
+.header-nav-items a:hover {
+  border-bottom: 1px solid #0290ff;
+}
+
+.active {
+  border-bottom: 1px solid #0290ff;
+}
+
+.header-nav-item .nav-brand-logo:hover {
+  border-bottom: none;
+}
+
+.user-avatar {
+  color: #0290ff;
+  border-radius: 50%;
+  width: 2.25rem;
+  height: 2.25rem;
+  outline: none;
+  background-color: #fff;
+  border: 1px solid #0290ff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.125rem;
+}
+
+.user-avatar img {
+  border-radius: 50%;
+  width: 1.75rem;
+  height: 1.75rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.user-avatar:hover img {
+  border: 2px solid rgb(35, 60, 202);
+}
+

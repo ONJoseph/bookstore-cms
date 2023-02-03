@@ -1,60 +1,50 @@
-import apis from '../../booksAPIs/apis';
-import '../../styles/App.css';
+import { apiAddBook, apiFetchBooks, apiRemoveBook } from '../../booksAPIs/apis';
 
-const ADD_BOOK = 'ADD_BOOK';
-const REMOVE_BOOK = 'REMOVE_BOOK';
-const GET_ALL_BOOKS = 'GET_ALL_BOOKS';
+const ADD_BOOK = 'react-bookstore/book/ADD_BOOK';
+const REMOVE_BOOK = 'react-bookstore/book/REMOVE_BOOK';
+const FETCH_BOOKS = 'react-bookstore/book/FETCH_BOOKS';
 
-// Initial State
 const initialState = [];
 
-const booksReducer = (state = initialState, action) => {
+const bookReducer = (state = initialState, action = {}) => {
   switch (action.type) {
     case ADD_BOOK:
-      return [...state, action.book];
+      return [...state, action.newBook];
     case REMOVE_BOOK:
-      return state.filter((book) => book.id !== action.book.id);
-    case GET_ALL_BOOKS:
+      return state.filter((prev) => prev.id !== action.id);
+    case FETCH_BOOKS:
       return action.books;
     default:
       return state;
   }
 };
 
-export const addBooks = (book) => async (dispatch) => {
-  try {
-    await apis.addBooks(book);
-    dispatch({
-      type: ADD_BOOK,
-      book,
-    });
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-export const removeBook = (book) => async (dispatch) => {
-  try {
-    await apis.removeBook(book);
-    dispatch({
-      type: REMOVE_BOOK,
-      book,
-    });
-  } catch (error) {
-    console.log(error);
-  }
-};
-
 export const fetchBooks = () => async (dispatch) => {
-  try {
-    const books = await apis.fetchBooks();
-    dispatch({
-      type: GET_ALL_BOOKS,
-      books,
-    });
-  } catch (error) {
-    console.log(error);
-  }
+  const books = await apiFetchBooks();
+  dispatch({
+    type: FETCH_BOOKS,
+    books,
+  });
 };
 
-export default booksReducer;
+export const addBook = (newBook) => async (dispatch) => {
+  apiAddBook(newBook);
+  dispatch(
+    {
+      type: ADD_BOOK,
+      newBook,
+    },
+  );
+};
+
+export const removeBook = (id) => async (dispatch) => {
+  await apiRemoveBook(id);
+  dispatch(
+    {
+      type: REMOVE_BOOK,
+      id,
+    },
+  );
+};
+
+export default bookReducer;
