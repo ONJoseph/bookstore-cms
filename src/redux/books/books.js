@@ -1,66 +1,50 @@
-import apis from '../../booksAPIs/apis';
+import { apiAddBook, apiFetchBooks, apiRemoveBook } from '../../booksAPIs/apis';
 
-const ADD_BOOK = 'ADD_BOOK';
-const REMOVE_BOOK = 'REMOVE_BOOK';
-const GET_ALL_BOOKS = 'GET_ALL_BOOKS';
+const ADD_BOOK = 'react-bookstore/book/ADD_BOOK';
+const REMOVE_BOOK = 'react-bookstore/book/REMOVE_BOOK';
+const FETCH_BOOKS = 'react-bookstore/book/FETCH_BOOKS';
 
-// Initial State
-const initialState = [
-  {
-    id: '1',
-    author: 'Joseph',
-    title: 'How to Achieve Mastery in Software Development',
-    category: 'Software',
-  },
-  {
-    id: '2',
-    author: 'John Smith',
-    title: 'The Great Gatsby',
-    category: 'Fiction',
-  },
-  {
-    id: '3',
-    author: 'Akasha',
-    title: 'The Unbearable Lightness of Being',
-    category: 'Lifestyle',
-  },
-];
+const initialState = [];
 
-const booksReducer = (state = initialState, action) => {
+const bookReducer = (state = initialState, action = {}) => {
   switch (action.type) {
     case ADD_BOOK:
-      return [...state, action.book];
+      return [...state, action.newBook];
     case REMOVE_BOOK:
-      return state.filter((book) => book.id !== action.book);
-    case GET_ALL_BOOKS:
+      return state.filter((prev) => prev.id !== action.id);
+    case FETCH_BOOKS:
       return action.books;
     default:
       return state;
   }
 };
 
-export const addBooks = (book) => async (dispatch) => {
-  apis.addBooks(book);
-  dispatch({
-    type: ADD_BOOK,
-    book,
-  });
-};
-
-export const removeBook = (book) => async (dispatch) => {
-  apis.removeBook(book);
-  dispatch({
-    type: REMOVE_BOOK,
-    book,
-  });
-};
-
 export const fetchBooks = () => async (dispatch) => {
-  const books = await apis.fetchBooks();
+  const books = await apiFetchBooks();
   dispatch({
-    type: GET_ALL_BOOKS,
+    type: FETCH_BOOKS,
     books,
   });
 };
 
-export default booksReducer;
+export const addBook = (newBook) => async (dispatch) => {
+  apiAddBook(newBook);
+  dispatch(
+    {
+      type: ADD_BOOK,
+      newBook,
+    },
+  );
+};
+
+export const removeBook = (id) => async (dispatch) => {
+  await apiRemoveBook(id);
+  dispatch(
+    {
+      type: REMOVE_BOOK,
+      id,
+    },
+  );
+};
+
+export default bookReducer;

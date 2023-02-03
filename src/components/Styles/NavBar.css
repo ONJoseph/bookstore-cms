@@ -1,0 +1,142 @@
+a {
+  text-decoration: none;
+}
+
+.nav-bar {
+  padding: 24px 4%;
+  background-color: white;
+  border-bottom: solid 1px #e8e8e8;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-brand {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #0290ff;
+}
+
+.nav-links {
+  display: flex;
+  flex-grow: 1;
+  list-style-type: none;
+  gap: 40px;
+}
+
+.nav-link {
+  opacity: 0.5;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.813rem;
+  color: #121212;
+  letter-spacing: 1.9px;
+}
+
+.active-link {
+  opacity: 1;
+  color: #121212;
+}
+
+.header-nav {
+  padding: 24px 4%;
+  background-color: #fff;
+  border-bottom: 1px solid #e8e8e8;
+  display: flex;
+  align-items: center;
+  grid-gap: 40px;
+  gap: 40px;
+}
+
+.header-nav-items {
+  display: flex;
+  flex-grow: 1;
+  list-style-type: none;
+  grid-gap: 40px;
+  gap: 40px;
+  text-decoration: none;
+  border-bottom: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.813rem;
+  color: #121212;
+}
+
+.nav-brand-logo {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #0290ff;
+  border-bottom: none;
+  text-decoration: none;
+}
+
+.nav-brand-logo span {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0290ff;
+  border-bottom: none;
+  text-decoration: none;
+}
+
+.nav-brand-logo a {
+  color: #0290ff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-transform: none;
+  border-bottom: none;
+}
+
+.header-nav-item {
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.813rem;
+  color: #121212;
+  letter-spacing: 1.9px;
+}
+
+.header-nav-items a {
+  padding: 10px 20px;
+  color: #0290ff;
+  border-bottom: none;
+}
+
+.header-nav-items a:hover {
+  border-bottom: 1px solid #0290ff;
+  border-bottom: none;
+}
+
+.active {
+  border-bottom: 1px solid #0290ff;
+  border-bottom: none;
+}
+
+.header-nav-item .nav-brand-logo:hover {
+  border-bottom: none;
+}
+
+.user-avatar {
+  color: #0290ff;
+  border-radius: 50%;
+  width: 2.25rem;
+  height: 2.25rem;
+  outline: none;
+  background-color: #fff;
+  border: 1px solid #0290ff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.125rem;
+}
+
+.user-avatar img {
+  border-radius: 50%;
+  width: 1.75rem;
+  height: 1.75rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.user-avatar:hover img {
+  border: 2px solid rgb(35, 60, 202);
+}

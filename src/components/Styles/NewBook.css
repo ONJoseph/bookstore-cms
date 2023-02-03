@@ -1,0 +1,34 @@
+.new-book-entry-form {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+}
+
+.input-field {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #e8e8e8;
+  outline: none;
+}
+
+.Book-Title-Input,
+.author-field {
+  width: 25%;
+}
+
+.category-dropdown {
+  width: 30%;
+  background-color: #fff;
+}
+
+.submit-button {
+  cursor: pointer;
+  border: none;
+  background-color: #0290ff;
+  border-radius: 3px;
+  padding: 8px 24px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  color: #fff;
+}
