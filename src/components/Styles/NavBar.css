@@ -1,33 +1,81 @@
-.header-nav {
+a {
+  text-decoration: none;
+}
+
+.nav-bar {
+  padding: 24px 4%;
+  background-color: white;
+  border-bottom: solid 1px #e8e8e8;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 40px;
+}
+
+.nav-brand {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #0290ff;
+}
+
+.nav-links {
+  display: flex;
+  flex-grow: 1;
+  list-style-type: none;
+  gap: 40px;
+}
+
+.nav-link {
+  opacity: 0.5;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.813rem;
+  color: #121212;
+  letter-spacing: 1.9px;
+}
+
+.active-link {
+  opacity: 1;
+  color: #121212;
+}
+
+.header-nav {
   padding: 24px 4%;
   background-color: #fff;
   border-bottom: 1px solid #e8e8e8;
+  display: flex;
+  align-items: center;
+  grid-gap: 40px;
   gap: 40px;
 }
 
 .header-nav-items {
   display: flex;
-  gap: 20px;
-  text-transform: uppercase;
-  align-items: center;
+  flex-grow: 1;
   list-style-type: none;
+  grid-gap: 40px;
+  gap: 40px;
   text-decoration: none;
+  border-bottom: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.813rem;
+  color: #121212;
 }
 
 .nav-brand-logo {
-  display: flex;
-  gap: 0.625rem;
-  align-items: center;
-  margin-left: 4rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #0290ff;
+  border-bottom: none;
+  text-decoration: none;
 }
 
 .nav-brand-logo span {
   font-size: 1.8rem;
   font-weight: 700;
   color: #0290ff;
+  border-bottom: none;
+  text-decoration: none;
 }
 
 .nav-brand-logo a {
@@ -36,23 +84,31 @@
   font-size: 1.875rem;
   font-weight: 700;
   text-transform: none;
+  border-bottom: none;
 }
 
 .header-nav-item {
   cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.813rem;
+  color: #121212;
+  letter-spacing: 1.9px;
 }
 
 .header-nav-items a {
   padding: 10px 20px;
   color: #0290ff;
+  border-bottom: none;
 }
 
 .header-nav-items a:hover {
   border-bottom: 1px solid #0290ff;
+  border-bottom: none;
 }
 
 .active {
   border-bottom: 1px solid #0290ff;
+  border-bottom: none;
 }
 
 .header-nav-item .nav-brand-logo:hover {

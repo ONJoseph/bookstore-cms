@@ -50,6 +50,9 @@
 .current-chapter-progress-container {
   display: flex;
   flex-direction: column;
+  grid-gap: 20px;
+  gap: 20px;
+  width: 14rem;
 }
 
 .current-chapter-progress-container h3 {

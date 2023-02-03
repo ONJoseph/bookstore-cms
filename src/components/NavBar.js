@@ -10,10 +10,10 @@ const NavBar = () => (
         <Link to="/" className="brand-logo">Bookstore CMS</Link>
       </li>
       <li className="header-nav-items">
-        <NavLink to="/">Books</NavLink>
+        <NavLink to="/">BOOKS</NavLink>
       </li>
       <li className="header-nav-item">
-        <NavLink to="/categories">Categories</NavLink>
+        <NavLink to="/categories">CATEGORIES</NavLink>
       </li>
     </ul>
     <button type="button" className="user-avatar">
