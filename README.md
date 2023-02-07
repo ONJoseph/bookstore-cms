@@ -30,7 +30,7 @@
 
 # 📖 [Bookstore-CMS] <a name="about-project"></a>
 
-**[Bookstore-CMS]** is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to make simple calculations and Read a random math-related quote.
+**[Bookstore-CMS]** is an MVP version of AwesomeBooks that allows you to display a list of books, add a book and remove a selected book.
 
 ## 🛠 Built With <a name="built-with"></a>
 
